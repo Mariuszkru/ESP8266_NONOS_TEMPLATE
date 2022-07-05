@@ -2,7 +2,7 @@
     "msysPath":"C:\\msys32",
     "compilatorPath":"${config:msysPath}\\xtensa-lx106-elf",
     "SdkPath": "${config:msysPath}\\home\\mariu\\ESP8266_NONOS",
-    "SPI_FLASH_SIZE_MAP": 5,
+    "SPI_FLASH_SIZE_MAP": 6,
 
 
 
