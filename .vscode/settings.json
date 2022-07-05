@@ -1,11 +1,21 @@
 {   
+    "msysPath":"C:\\msys32",
+    "compilatorPath":"${config:msysPath}\\xtensa-lx106-elf",
+    "SdkPath": "${config:msysPath}\\home\\mariu\\ESP8266_NONOS",
+    "SPI_FLASH_SIZE_MAP": 5,
+
+
+
+
+
+
     "C_Cpp.errorSquiggles": "Enabled",
     "terminal.integrated.env.windows": {
-        "PATH": "C:\\msys32\\xtensa-lx106-elf\\bin;C:\\msys32\\usr\\bin;C:\\msys32\\mingw32\\bin;"
+        "PATH": "${config:compilatorPath}\\bin;${config:msysPath}\\usr\\bin;${config:msysPath}\\mingw32\\bin;"
     },
     "terminal.integrated.profiles.windows":{
         "esp8266": {
-            "path": "C:\\msys32\\usr\\bin\\bash.exe",
+            "path": "${config:msysPath}\\usr\\bin\\bash.exe",
             "args": [
                 "--login",
                 "-i"

@@ -1,21 +1,25 @@
 {
+    "env": {
+        "SPI_FLASH_SIZE_MAP": "${config:SPI_FLASH_SIZE_MAP}"
+      },
     "configurations": [
         {
-            "name": "esp8266",
+        
+            "name": "esp8266", 
             "includePath": [
                 "${workspaceFolder}/**",
-                "C:\\msys32\\home\\mariu\\ESP8266_NONOS\\**",
-                "C:\\msys32\\xtensa-lx106-elf/**"
+                "${config:SdkPath}/**",
+                "${config:compilatorPath}/**"
             ],
             "defines": [
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE",
-                "SPI_FLASH_SIZE_MAP=6" 
+                "SPI_FLASH_SIZE_MAP=${SPI_FLASH_SIZE_MAP}" 
             ],
             "cStandard": "c89",
             "intelliSenseMode": "windows-gcc-x64",
-            "compilerPath": "C:\\msys32\\xtensa-lx106-elf\\bin\\xtensa-lx106-elf-gcc"
+            "compilerPath": "${config:compilatorPath}\\bin\\xtensa-lx106-elf-gcc"
         }
     ],
     "version": 4

@@ -6,7 +6,7 @@
         {
             "label": "Build Firmware",
             "type": "shell",
-            "command": "make COMPILE=gcc BOOT=new APP=1 SPI_SPEED=40 SPI_MODE=DIO SPI_SIZE_MAP=6",
+            "command": "make COMPILE=gcc BOOT=new APP=1 SPI_SPEED=40 SPI_MODE=DIO SPI_SIZE_MAP=${config:SPI_FLASH_SIZE_MAP}",
             "problemMatcher": [
                 "$gcc"
             ]
