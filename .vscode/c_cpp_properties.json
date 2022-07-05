@@ -1,21 +1,20 @@
 {
     "configurations": [
         {
-            "name": "Win32",
+            "name": "esp8266",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/../include",
-                "${workspaceFolder}/../../../../xtensa-lx106-elf/**"
+                "C:\\msys32\\home\\mariu\\ESP8266_NONOS\\**",
+                "C:\\msys32\\xtensa-lx106-elf/**"
             ],
             "defines": [
                 "_DEBUG",
                 "UNICODE",
-                "_UNICODE"
+                "_UNICODE",
+                "SPI_FLASH_SIZE_MAP=6" 
             ],
             "cStandard": "c89",
-            "cppStandard": "c++98",
             "intelliSenseMode": "windows-gcc-x64",
-            "configurationProvider": "ms-vscode.makefile-tools",
             "compilerPath": "C:\\msys32\\xtensa-lx106-elf\\bin\\xtensa-lx106-elf-gcc"
         }
     ],
