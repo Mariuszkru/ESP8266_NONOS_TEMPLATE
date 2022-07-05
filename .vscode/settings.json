@@ -1,6 +1,9 @@
 {
     "makefile.extensionOutputFolder": "./.vscode",
     "C_Cpp.errorSquiggles": "Enabled",
+    "terminal.integrated.env.windows": {
+        "PATH": "C:\\msys32\\xtensa-lx106-elf\\bin;C:\\msys32\\usr\\bin;C:\\msys32\\mingw32\\bin;"
+    },
     "terminal.integrated.profiles.windows":{
         "esp8266": {
             "path": "C:\\msys32\\usr\\bin\\bash.exe",
@@ -11,7 +14,7 @@
             "env": {
                 "MSYSTEM": "MINGW32",
                 "CHERE_INVOKING": "1",
-                "MSYS2_PATH_TYPE": "inherit"
+                "MSYS2_PATH_TYPE": "inherit",
             }
         }
     },
