@@ -1,5 +1,4 @@
-{
-    "makefile.extensionOutputFolder": "./.vscode",
+{   
     "C_Cpp.errorSquiggles": "Enabled",
     "terminal.integrated.env.windows": {
         "PATH": "C:\\msys32\\xtensa-lx106-elf\\bin;C:\\msys32\\usr\\bin;C:\\msys32\\mingw32\\bin;"
