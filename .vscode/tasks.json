@@ -4,9 +4,12 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "echo",
+            "label": "Build Firmware",
             "type": "shell",
-            "command": "echo Hello"
+            "command": "make COMPILE=gcc BOOT=new APP=1 SPI_SPEED=40 SPI_MODE=DIO SPI_SIZE_MAP=6",
+            "problemMatcher": [
+                "$gcc"
+            ]
         }
     ]
 }
