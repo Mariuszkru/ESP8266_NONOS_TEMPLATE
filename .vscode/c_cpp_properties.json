@@ -8,8 +8,8 @@
             "name": "esp8266", 
             "includePath": [
                 "${workspaceFolder}/**",
-                "${config:SdkPath}/**",
-                "${config:compilatorPath}/**"
+                "${config:esp.path.Sdk}/**",
+                "${config:esp.path.compiler}/**"
             ],
             "defines": [
                 "_DEBUG",
@@ -19,7 +19,7 @@
             ],
             "cStandard": "c89",
             "intelliSenseMode": "windows-gcc-x64",
-            "compilerPath": "${config:compilatorPath}\\bin\\xtensa-lx106-elf-gcc"
+            "compilerPath": "${config:esp.path.compiler}\\bin\\xtensa-lx106-elf-gcc" 
         }
     ],
     "version": 4

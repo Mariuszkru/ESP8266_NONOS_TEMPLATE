@@ -1,31 +1,32 @@
-{   
-    "msysPath":"C:\\msys32",
-    "compilatorPath":"${config:msysPath}\\xtensa-lx106-elf",
-    "SdkPath": "${config:msysPath}\\home\\mariu\\ESP8266_NONOS",
+{
+  "esp": {
+    "terget":{
+        "esptoolPort": "com4",
+        "esptoolBaudrate": 115200
+    },
+    "path": {
+      "msys": "C:\\msys32",
+      "compiler": "${config:esp.path.msys}\\xtensa-lx106-elf",
+      "Sdk": "${config:esp.path.msys}\\home\\mariu\\ESP8266_NONOS",
+    },
     "SPI_FLASH_SIZE_MAP": 6,
 
+  },
 
-
-
-
-
-    "C_Cpp.errorSquiggles": "Enabled",
-    "terminal.integrated.env.windows": {
-        "PATH": "${config:compilatorPath}\\bin;${config:msysPath}\\usr\\bin;${config:msysPath}\\mingw32\\bin;"
-    },
-    "terminal.integrated.profiles.windows":{
-        "esp8266": {
-            "path": "${config:msysPath}\\usr\\bin\\bash.exe",
-            "args": [
-                "--login",
-                "-i"
-            ],
-            "env": {
-                "MSYSTEM": "MINGW32",
-                "CHERE_INVOKING": "1",
-                "MSYS2_PATH_TYPE": "inherit",
-            }
-        }
-    },
-    "terminal.integrated.defaultProfile.windows": "esp8266",
+  "C_Cpp.errorSquiggles": "Enabled",
+  "terminal.integrated.env.windows": {
+    "PATH": "${config:esp.path.msys}\\bin;${config:esp.path.msys}\\usr\\bin;${config:esp.path.msys}\\mingw32\\bin;"
+  },
+  "terminal.integrated.profiles.windows": {
+    "esp8266": {
+      "path": "${config:esp.path.msys}\\usr\\bin\\bash.exe",
+      "args": ["--login", "-i"],
+      "env": {
+        "MSYSTEM": "MINGW32",
+        "CHERE_INVOKING": "1",
+        "MSYS2_PATH_TYPE": "inherit"
+      }
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "esp8266"
 }

@@ -1,15 +1,21 @@
 {
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
     "version": "2.0.0",
     "tasks": [
         {
             "label": "Build Firmware",
             "type": "shell",
+            "group": {
+                "kind": "build",
+            },
             "command": "make COMPILE=gcc BOOT=new APP=1 SPI_SPEED=40 SPI_MODE=DIO SPI_SIZE_MAP=${config:SPI_FLASH_SIZE_MAP}",
             "problemMatcher": [
                 "$gcc"
             ]
+        },
+        {
+            "label": "flashing",
+            "type": "shell",
+            "command": "esptool.py --port ${config:esptool.port} --b ${config:esptoolBaudrate} write_flash ",
         }
-    ]
+    ],
 }
