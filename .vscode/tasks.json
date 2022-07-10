@@ -5,9 +5,9 @@
             "label": "Build Firmware",
             "type": "shell",
             "group": {
-                "kind": "build",
+                "kind": "build"
             },
-            "command": "make COMPILE=gcc BOOT=new APP=1 SPI_SPEED=40 SPI_MODE=DIO SPI_SIZE_MAP=${config:SPI_FLASH_SIZE_MAP}",
+            "command": "make COMPILE=gcc BOOT=new APP=1 SPI_SPEED=40 SPI_MODE=DIO SPI_SIZE_MAP=${config:esp.SPI_FLASH_SIZE_MAP}",
             "problemMatcher": [
                 "$gcc"
             ]
@@ -15,7 +15,8 @@
         {
             "label": "flashing",
             "type": "shell",
-            "command": "esptool.py --port ${config:esptool.port} --b ${config:esptoolBaudrate} write_flash ",
+            "command": "esptool.py --port ${config:esp.target.port} -b ${config:esp.target.baudrate}",
+            "problemMatcher": []
         }
     ],
 }

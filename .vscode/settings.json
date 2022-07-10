@@ -1,8 +1,8 @@
 {
   "esp": {
-    "terget":{
-        "esptoolPort": "com4",
-        "esptoolBaudrate": 115200
+    "target":{
+        "port": "com6",
+        "baudrate": 115200
     },
     "path": {
       "msys": "C:\\msys32",
@@ -10,12 +10,11 @@
       "Sdk": "${config:esp.path.msys}\\home\\mariu\\ESP8266_NONOS",
     },
     "SPI_FLASH_SIZE_MAP": 6,
-
   },
 
   "C_Cpp.errorSquiggles": "Enabled",
   "terminal.integrated.env.windows": {
-    "PATH": "${config:esp.path.msys}\\bin;${config:esp.path.msys}\\usr\\bin;${config:esp.path.msys}\\mingw32\\bin;"
+    "PATH": "${config:esp.path.compiler}\\bin;${config:esp.path.msys}\\usr\\bin;${config:esp.path.msys}\\mingw32\\bin;"
   },
   "terminal.integrated.profiles.windows": {
     "esp8266": {
