@@ -2,7 +2,7 @@
   "esp": {
     "target":{
         "port": "com6",
-        "baudrate": 115200
+        "baudrate": 1500000
     },
     "path": {
       "msys": "C:\\msys32",
