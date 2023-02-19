@@ -1,6 +1,6 @@
 {
     "env": {
-        "SPI_FLASH_SIZE_MAP": "${config:esp.SPI_FLASH_SIZE_MAP}"
+        "SPI_FLASH_SIZE_MAP": "${config:esp.target.spiFlashSizeMap}"
       },
     "configurations": [
         {
