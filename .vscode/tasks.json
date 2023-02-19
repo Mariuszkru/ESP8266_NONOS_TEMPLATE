@@ -31,7 +31,6 @@
             "type": "shell",
             "command": "esptool --port ${config:esp.target.port} -b ${config:esp.target.baudrate} erase_flash",
             "problemMatcher": []
-          },
-          
+          },         
     ],
 } 

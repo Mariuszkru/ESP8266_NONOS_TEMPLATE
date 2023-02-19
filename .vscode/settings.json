@@ -1,7 +1,7 @@
 {
   "esp": {
     "target":{
-        "port": "com6",
+        "port": "com3",
         "baudrate": 1500000,
         "spiFlashSizeMap" : 6 
     },
@@ -33,6 +33,11 @@
       }
     }
   },
-  "terminal.integrated.defaultProfile.windows": "esp8266"
+  "terminal.integrated.defaultProfile.windows": "esp8266",
+  "files.associations": {
+    "ets_sys.h": "c",
+    "osapi.h": "c",
+    "user_interface.h": "c"
+  }
 }
 
