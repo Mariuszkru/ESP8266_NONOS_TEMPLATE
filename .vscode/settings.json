@@ -2,14 +2,15 @@
   "esp": {
     "target":{
         "port": "com6",
-        "baudrate": 1500000
+        "baudrate": 1500000,
+        "spiFlashSizeMap" : 6
     },
     "path": {
-      "msys": "C:\\msys32",
+      "user": "mariu", // user name of windows machine
+      "msys": "C:\\msys32", // path to msys32
       "compiler": "${config:esp.path.msys}\\xtensa-lx106-elf",
-      "Sdk": "${config:esp.path.msys}\\home\\mariu\\ESP8266_NONOS",
-    },
-    "SPI_FLASH_SIZE_MAP": 6,
+      "Sdk": "${config:esp.path.msys}\\home\\${config:esp.path.user}\\ESP8266_NONOS",
+    }
   },
 
   "C_Cpp.errorSquiggles": "Enabled",
@@ -29,3 +30,4 @@
   },
   "terminal.integrated.defaultProfile.windows": "esp8266"
 }
+
